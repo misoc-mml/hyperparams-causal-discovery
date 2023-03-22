@@ -1,0 +1,1 @@
+snakemake --cores all --use-singularity --configfile config/config_1.json
