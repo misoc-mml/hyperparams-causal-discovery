@@ -1,0 +1,22 @@
+{
+    "title": "CGNN",
+    "version": "0.6.0",
+    "package": {
+        "title": "cdt",
+        "url": "https://github.com/FenTechSolutions/CausalDiscoveryToolbox/tree/master"
+    },
+    "docs_url": "",
+    "papers": [
+        {
+            "title": "TODO",
+            "url": "https://arxiv.org/abs/2111.15155"
+        }
+    ],
+    "outputs": [
+        "adjmat"
+    ],
+    "graph_types": [
+        "DAG"
+    ],
+    "language": "Python"
+}

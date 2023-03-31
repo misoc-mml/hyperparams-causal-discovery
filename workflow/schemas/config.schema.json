@@ -169,6 +169,15 @@
                         "mylib_myalg": {
                             "$ref": "../rules/structure_learning_algorithms/mylib_myalg/schema.json"
                         },
+                        "cdt_cam": {
+                            "$ref": "../rules/structure_learning_algorithms/cdt_cam/schema.json"
+                        },
+                        "cdt_cgnn": {
+                            "$ref": "../rules/structure_learning_algorithms/cdt_cgnn/schema.json"
+                        },
+                        "cdt_sam": {
+                            "$ref": "../rules/structure_learning_algorithms/cdt_sam/schema.json"
+                        },
                         "causaldag_gsp": {
                             "$ref": "../rules/structure_learning_algorithms/causaldag_gsp/schema.json"
                         },

@@ -1,0 +1,38 @@
+{
+    "title": "cdt_cgnn",
+    "description": "List of cdt_cgnn objects",
+    "type": "array",
+    "items": {
+        "title": "cdt_cgnn item",
+        "description": "cdt_cgnn object",
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "string",
+                "title": "Unique identifier",
+                "description": "Unique identifier for that can be used as reference in the benchmark_setup."
+            },
+            "timeout": {
+                "$ref": "../../../schemas/definitions.schema.json#/definitions/flexnonnegnumnull"
+            }
+        },
+        "additionalProperties": true,
+        "required": [
+            "id",
+            "timeout"
+        ],
+        "examples": [
+            {
+                "id": "cdt_cgnn",
+                "timeout": null,
+                "nh": 20,
+                "nruns": 16,
+                "batch_size": -1,
+                "lr": 0.01,
+                "train_epochs": 100,
+                "test_epochs": 100
+            }
+        ]
+    },
+    "uniqueItems": true
+}

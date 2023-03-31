@@ -1,0 +1,32 @@
+{
+    "title": "cdt_sam",
+    "description": "List of cdt_sam objects",
+    "type": "array",
+    "items": {
+        "title": "cdt_sam item",
+        "description": "cdt_sam object",
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "string",
+                "title": "Unique identifier",
+                "description": "Unique identifier for that can be used as reference in the benchmark_setup."
+            },
+            "timeout": {
+                "$ref": "../../../schemas/definitions.schema.json#/definitions/flexnonnegnumnull"
+            }
+        },
+        "additionalProperties": true,
+        "required": [
+            "id",
+            "timeout"
+        ],
+        "examples": [
+            {
+                "id": "cdt_sam",
+                "timeout": null
+            }
+        ]
+    },
+    "uniqueItems": true
+}

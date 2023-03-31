@@ -1,0 +1,83 @@
+{
+    "benchmark_setup": {
+        "data": [
+            {
+                "graph_id": "avneigs4_p20",
+                "parameters_id": "SEM",
+                "data_id": "standardized",
+                "seed_range": [1, 3]
+            }
+        ],
+        "evaluation": {
+            "benchmarks": {
+                "filename_prefix": "cdt_1/",
+                "show_seed": false,
+                "errorbar": true,
+                "errorbarh": false,
+                "scatter": true,
+                "path": true,
+                "text": false,
+                "ids": [                    
+                    "cdt_cam"
+                ]
+            },
+            "graph_true_plots": false,
+            "graph_true_stats": false,
+            "ggally_ggpairs": false,
+            "graph_plots": [],
+            "mcmc_traj_plots": [],
+            "mcmc_heatmaps": [],
+            "mcmc_autocorr_plots": []
+        }
+    },
+    "resources": {
+        "data": {
+            "iid": [
+                {
+                    "id": "standardized",
+                    "standardized": true,
+                    "n": [
+                        300
+                    ]
+                }
+            ]
+        },
+        "graph": {
+            "pcalg_randdag": [
+                {
+                    "id": "avneigs4_p20",
+                    "max_parents": 5,
+                    "n": 20,
+                    "d": 4,
+                    "par1": null,
+                    "par2": null,
+                    "method": "er",
+                    "DAG": true
+                }
+            ]
+        },
+        "parameters": {
+            "sem_params": [
+                {
+                    "id": "SEM",
+                    "min": 0.25,
+                    "max": 1
+                }
+            ]
+        },
+        "structure_learning_algorithms": {
+            "cdt_cam": [
+                {
+                    "id": "cdt_cam",
+                    "timeout": null,
+                    "score": "nonlinear",
+                    "cutoff": [0.001, 0.01, 0.1],
+                    "variablesel": true,
+                    "selmethod": "gamboost",
+                    "pruning": true,
+                    "prunmethod": "gam"
+                }
+            ]
+        }
+    }
+}
