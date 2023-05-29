@@ -83,21 +83,18 @@ def wrapper():
 
     elif(snakemake.params["alg"] == "notears_nonlinear"):
         from castle.algorithms import NotearsNonlinear
+        layers = [int(snakemake.wildcards["hidden_units"]) for _ in range(int(snakemake.wildcards["hidden_layers"]))] + [1]
         n = NotearsNonlinear(lambda1=float(snakemake.wildcards["lambda1"]),
-                             lambda2=float(
-            snakemake.wildcards["lambda2"]),
-            max_iter=int(
-            snakemake.wildcards["max_iter"]),
-            h_tol=float(
-            snakemake.wildcards["h_tol"]),
-            rho_max=float(
-            snakemake.wildcards["rho_max"]),
-            w_threshold=float(
-            snakemake.wildcards["w_threshold"]),
-            bias=eval(snakemake.wildcards["bias"]),
-            model_type=snakemake.wildcards["model_type"],
-            device_type=snakemake.wildcards["device_type"],
-            device_ids=snakemake.wildcards["device_ids"])
+                             lambda2=float(snakemake.wildcards["lambda2"]),
+                             max_iter=int(snakemake.wildcards["max_iter"]),
+                             h_tol=float(snakemake.wildcards["h_tol"]),
+                             rho_max=float(snakemake.wildcards["rho_max"]),
+                             w_threshold=float(snakemake.wildcards["w_threshold"]),
+                             hidden_layers=layers,
+                             bias=eval(snakemake.wildcards["bias"]),
+                             model_type=snakemake.wildcards["model_type"],
+                             device_type=snakemake.wildcards["device_type"],
+                             device_ids=snakemake.wildcards["device_ids"])
         n.learn(df.values, columns=df.columns)
 
     elif(snakemake.params["alg"] == "notears_low_rank"):
