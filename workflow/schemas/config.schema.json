@@ -120,6 +120,9 @@
                         "pcalg_randdag": {
                             "$ref": "../rules/graph/pcalg_randdag/schema.json"
                         },
+                        "gcastle_dag": {
+                            "$ref": "../rules/graph/gcastle_dag/schema.json"
+                        },
                         "trilearn_cta": {
                             "$ref": "../rules/graph/trilearn_cta/schema.json"
                         },
