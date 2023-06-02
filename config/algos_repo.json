@@ -1,0 +1,175 @@
+{
+    "resources": {
+        "structure_learning_algorithms": {
+            "pcalg_pc": [
+                {
+                    "id": "pc-gaussCItest",
+                    "alpha": [
+                        0.001,
+                        0.005,
+                        0.01,
+                        0.05,
+                        0.1,
+                        0.5
+                    ],
+                    "NAdelete": true,
+                    "mmax": "Inf",
+                    "u2pd": "relaxed",
+                    "skelmethod": "stable",
+                    "conservative": false,
+                    "majrule": false,
+                    "solveconfl": false,
+                    "numCores": 1,
+                    "verbose": false,
+                    "indepTest": "gaussCItest",
+                    "timeout": null
+                }
+            ],
+            "tetrad_fges": [
+                {
+                    "id": "fges-sem-bic",
+                    "faithfulnessAssumed": true,
+                    "score": "sem-bic",
+                    "datatype": "continuous",
+                    "samplePrior": 1,
+                    "structurePrior": 1,
+                    "penaltyDiscount": [
+                        0.1,
+                        0.25,
+                        0.5,
+                        0.75,
+                        1,
+                        1.5
+                    ],
+                    "timeout": null
+                }
+            ],
+            "tetrad_fci": [
+                {
+                    "id": "fci-fisher-z",
+                    "alpha": [
+                        0.001,
+                        0.005,
+                        0.01,
+                        0.05,
+                        0.1,
+                        0.5
+                    ],
+                    "test": "fisher-z-test",
+                    "datatype": "continuous",
+                    "timeout": null
+                }
+            ],
+            "gcastle_ica_lingam": [
+                {
+                    "id": "gcastle_ica_lingam",
+                    "thresh": [
+                        0.01,
+                        0.05,
+                        0.1,
+                        0.2,
+                        0.3,
+                        0.5
+                    ],
+                    "random_state": null,
+                    "max_iter": [
+                        100,
+                        1000
+                    ],
+                    "timeout": null
+                }
+            ],
+            "gcastle_anm": [
+                {
+                    "id": "gcastle_anm",
+                    "alpha": [
+                        0.001,
+                        0.005,
+                        0.01,
+                        0.05,
+                        0.1,
+                        0.5
+                    ],
+                    "timeout": null
+                }
+            ],
+            "cdt_cam": [
+                {
+                    "id": "cdt_cam",
+                    "score": "nonlinear",
+                    "cutoff": 
+                    [
+                        0.001,
+                        0.01,
+                        0.1
+                    ],
+                    "variablesel": true,
+                    "selmethod": "gamboost",
+                    "pruning": true,
+                    "prunmethod": "gam",
+                    "timeout": null
+                }
+            ],
+            "gcastle_notears": [
+                {
+                    "id": "gcastle_notears",
+                    "lambda1": 0.1,
+                    "loss_type": "l2",
+                    "max_iter": 100,
+                    "h_tol": "1e-8",
+                    "rho_max": "1e+16",
+                    "w_threshold": [
+                        0.05,
+                        0.1,
+                        0.25
+                    ],
+                    "timeout": null
+                }
+            ],
+            "gcastle_notears_nonlinear": [
+                {
+                    "id": "gcastle_notears_mlp",
+                    "lambda1": 0.01,
+                    "lambda2": 0.01,
+                    "max_iter": 100,
+                    "h_tol": "1e-8",
+                    "rho_max": "1e+16",
+                    "w_threshold": [
+                        0.05,
+                        0.1,
+                        0.3
+                    ],
+                    "hidden_layers": [1, 2],
+                    "hidden_units": [8, 16],
+                    "bias": true,
+                    "model_type": "mlp",
+                    "device_type": "cpu",
+                    "device_ids": null,
+                    "timeout": null
+                }
+            ],
+            "gcastle_mcsl": [
+                {
+                    "id": "gcastle_mcsl",
+                    "model_type": "nn",
+                    "hidden_dim": 16,
+                    "graph_thresh": 0.5,
+                    "l1_graph_penalty": "2e-3",
+                    "learning_rate": "3e-2",
+                    "max_iter": 5,
+                    "iter_step": 100,
+                    "init_iter": 2,
+                    "h_tol": "1e-10",
+                    "init_rho": "1e-5",
+                    "rho_thresh": "1e14",
+                    "h_thresh": 0.25,
+                    "rho_multiply": 10,
+                    "temperature": 0.2,
+                    "device_type": "cpu",
+                    "device_ids": "0",
+                    "timeout": null
+                }
+            ]
+        }
+    }
+}

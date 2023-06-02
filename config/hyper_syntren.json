@@ -1,0 +1,116 @@
+{
+    "benchmark_setup": {
+        "data": [
+            {
+                "graph_id": "syntren_dag_1.csv",
+                "parameters_id": null,
+                "data_id": "syntren_data_1.csv",
+                "seed_range": null
+            },
+            {
+                "graph_id": "syntren_dag_2.csv",
+                "parameters_id": null,
+                "data_id": "syntren_data_2.csv",
+                "seed_range": null
+            },
+            {
+                "graph_id": "syntren_dag_3.csv",
+                "parameters_id": null,
+                "data_id": "syntren_data_3.csv",
+                "seed_range": null
+            },
+            {
+                "graph_id": "syntren_dag_4.csv",
+                "parameters_id": null,
+                "data_id": "syntren_data_4.csv",
+                "seed_range": null
+            },
+            {
+                "graph_id": "syntren_dag_5.csv",
+                "parameters_id": null,
+                "data_id": "syntren_data_5.csv",
+                "seed_range": null
+            },
+            {
+                "graph_id": "syntren_dag_6.csv",
+                "parameters_id": null,
+                "data_id": "syntren_data_6.csv",
+                "seed_range": null
+            },
+            {
+                "graph_id": "syntren_dag_7.csv",
+                "parameters_id": null,
+                "data_id": "syntren_data_7.csv",
+                "seed_range": null
+            },
+            {
+                "graph_id": "syntren_dag_8.csv",
+                "parameters_id": null,
+                "data_id": "syntren_data_8.csv",
+                "seed_range": null
+            },
+            {
+                "graph_id": "syntren_dag_9.csv",
+                "parameters_id": null,
+                "data_id": "syntren_data_9.csv",
+                "seed_range": null
+            },
+            {
+                "graph_id": "syntren_dag_10.csv",
+                "parameters_id": null,
+                "data_id": "syntren_data_10.csv",
+                "seed_range": null
+            }
+        ],
+        "evaluation": {
+            "benchmarks": {
+                "filename_prefix": "hyper_syntren/",
+                "show_seed": false,
+                "errorbar": false,
+                "errorbarh": false,
+                "scatter": true,
+                "path": true,
+                "text": false,
+                "ids": [
+                    "pc-gaussCItest"
+                ]
+            },
+            "graph_true_stats": true,
+            "graph_true_plots": true,
+            "ggally_ggpairs": true,
+            "graph_plots": [],
+            "mcmc_traj_plots": [],
+            "mcmc_heatmaps": [],
+            "mcmc_autocorr_plots": []
+        }
+    },
+    "resources": {
+        "data": {},
+        "graph": {},
+        "parameters": {},
+        "structure_learning_algorithms": {
+            "pcalg_pc": [
+                {
+                    "id": "pc-gaussCItest",
+                    "alpha": [
+                        0.001,
+                        0.01,
+                        0.05,
+                        0.1
+                    ],
+                    "NAdelete": true,
+                    "mmax": "Inf",
+                    "u2pd": "relaxed",
+                    "skelmethod": "stable",
+                    "conservative": false,
+                    "majrule": false,
+                    "solveconfl": false,
+                    "numCores": 1,
+                    "verbose": false,
+                    "indepTest": "gaussCItest",
+                    "timeout": null
+                }
+            ]
+        }
+    }
+}
