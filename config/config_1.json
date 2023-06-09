@@ -3,23 +3,22 @@
         "data": [
             {
                 "graph_id": "avneigs4_p20",
-                "parameters_id": "SEM",
-                "data_id": "standardized",
+                "parameters_id": "G_SEM",
+                "data_id": "gcastle_sem_gauss",
                 "seed_range": [1, 3]
             }
         ],
         "evaluation": {
             "benchmarks": {
-                "filename_prefix": "config_1/",
+                "filename_prefix": "config_3/",
                 "show_seed": false,
-                "errorbar": true,
+                "errorbar": false,
                 "errorbarh": false,
                 "scatter": true,
                 "path": true,
                 "text": false,
-                "ids": [                    
-                    "pc-gaussCItest",
-                    "fges-sem-bic"
+                "ids": [
+                    "pc-gaussCItest"
                 ]
             },
             "graph_true_plots": false,
@@ -33,10 +32,39 @@
     },
     "resources": {
         "data": {
+            "gcastle_iidsim": [
+                {
+                    "id": "gcastle_sem_gauss",
+                    "standardized": true,
+                    "method": "linear",
+                    "sem_type": "gauss",
+                    "noise_scale": 1.0,
+                    "n": [
+                        300, 500
+                    ]
+                },
+                {
+                    "id": "gcastle_sem_exp",
+                    "standardized": true,
+                    "method": "linear",
+                    "sem_type": "exp",
+                    "noise_scale": 1.0,
+                    "n": [
+                        300, 500
+                    ]
+                }
+            ],
             "iid": [
                 {
                     "id": "standardized",
                     "standardized": true,
+                    "n": [
+                        300
+                    ]
+                },
+                {
+                    "id": "nonstandardized",
+                    "standardized": false,
                     "n": [
                         300
                     ]
@@ -48,7 +76,7 @@
                 {
                     "id": "avneigs4_p20",
                     "max_parents": 5,
-                    "n": 20,
+                    "n": 10,
                     "d": 4,
                     "par1": null,
                     "par2": null,
@@ -58,6 +86,13 @@
             ]
         },
         "parameters": {
+            "gcastle_sem": [
+                {
+                    "id": "G_SEM",
+                    "min": 0.5,
+                    "max": 2.0
+                }
+            ],
             "sem_params": [
                 {
                     "id": "SEM",
@@ -72,8 +107,6 @@
                     "id": "pc-gaussCItest",
                     "alpha": [
                         0.001,
-                        0.01,
-                        0.05,
                         0.1
                     ],
                     "NAdelete": true,
@@ -86,23 +119,6 @@
                     "numCores": 1,
                     "verbose": false,
                     "indepTest": "gaussCItest",
-                    "timeout": null
-                }
-            ],
-            "tetrad_fges": [
-                {
-                    "id": "fges-sem-bic",
-                    "faithfulnessAssumed": true,
-                    "score": "sem-bic",
-                    "datatype": "continuous",
-                    "samplePrior": 1,
-                    "structurePrior": 1,
-                    "penaltyDiscount": [
-                        0.75,
-                        0.8,
-                        1,
-                        1.5
-                    ],
                     "timeout": null
                 }
             ]

@@ -1,0 +1,35 @@
+{
+    "title": "gCastle SEM",
+    "description": "gCastle SEM",
+    "type": "array",
+    "items": {
+        "title": "Some title",
+        "description": "Some description",
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "string"
+            },
+            "min": {
+                "$ref": "../../../schemas/definitions.schema.json#/definitions/flexnonnegnum"
+            },
+            "max": {
+                "$ref": "../../../schemas/definitions.schema.json#/definitions/flexnonnegnum"
+            }
+        },
+        "required": [
+            "id",
+            "min",
+            "max"
+        ],
+        "additionalProperties": false,
+        "examples": [
+            {
+                "id": "gcastle_sem",
+                "min": 0.5,
+                "max": 2.0
+            }
+        ]
+    },
+    "uniqueItems": true
+}

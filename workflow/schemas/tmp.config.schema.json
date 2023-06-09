@@ -155,6 +155,9 @@
                         "sem_params": {
                             "$ref": "../rules/parameters/sem_params/schema.json"
                         },
+                        "gcastle_sem": {
+                            "$ref": "../rules/parameters/gcastle_sem/schema.json"
+                        },
                         "trilearn_hyper-dir": {
                             "$ref": "../rules/parameters/trilearn_hyper-dir/schema.json"
                         },
