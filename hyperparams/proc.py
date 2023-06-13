@@ -36,7 +36,9 @@ for target in targets:
 
     # Summary stats grouped by algs, across data seeds
     #df_alg = best.groupby(['algorithm'], as_index=False).agg(['mean', 'std', 'min', 'max', 'median', 'sem'])
-    df_alg = best.groupby(['algorithm', 'graph_p', 'graph_d', 'graph_type', 'data_sem', 'data_n'], as_index=False).mean()
+    #df_alg = best.groupby(['algorithm', 'graph_p', 'graph_d', 'graph_type', 'data_sem', 'data_n'], as_index=False).mean()
 
     #df_alg[target].to_csv(f'{target}.csv')
-    df_alg.to_csv(f'{target}.csv')
+    #df_alg.to_csv(f'{target}.csv')
+
+    best.to_csv('results.csv')
