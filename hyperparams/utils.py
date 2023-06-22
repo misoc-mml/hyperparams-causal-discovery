@@ -12,6 +12,18 @@ def extract_cols(df):
 
     return df
 
+def _get_h(df):
+    df = extract_cols(df)
+    return df.groupby(['id', 'graph_p', 'graph_d', 'graph_type', 'data_sem', 'data_n', 'replicate'], as_index=False)
+
+def best_h(df):
+    df_h = _get_h(df)
+    return df_h.apply(lambda x: x.loc[x['SHD_pattern'].idxmin()])
+
+def worst_h(df):
+    df_h = _get_h(df)
+    return df_h.apply(lambda x: x.loc[x['SHD_pattern'].idxmax()])
+
 def best_seeds(df, params):
     df = extract_cols(df)
     df['hyper_id'] = df.groupby(params, dropna=False).ngroup()
