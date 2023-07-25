@@ -3,7 +3,7 @@
         "data": [
             {
                 "graph_id": "er_full",
-                "parameters_id": "SEM",
+                "parameters_id": "G_SEM",
                 "data_id": "gcastle_sem_gumbel",
                 "seed_range": [1, 10]
             },
@@ -15,7 +15,7 @@
             },
             {
                 "graph_id": "sf_full",
-                "parameters_id": "SEM",
+                "parameters_id": "G_SEM",
                 "data_id": "gcastle_sem_gumbel",
                 "seed_range": [1, 10]
             },
@@ -30,14 +30,20 @@
             "benchmarks": {
                 "filename_prefix": "hyper_sim/",
                 "show_seed": false,
-                "errorbar": true,
+                "errorbar": false,
                 "errorbarh": false,
-                "scatter": true,
+                "scatter": false,
                 "path": true,
                 "text": false,
                 "ids": [
-                    "pc-gaussCItest",
-                    "fges-sem-bic"
+                    "pc",
+                    "fges",
+                    "fci",
+                    "lingam",
+                    "anm",
+                    "cam",
+                    "notears",
+                    "notears_mlp"
                 ]
             },
             "graph_true_plots": false,
@@ -115,6 +121,13 @@
             ]
         },
         "parameters": {
+            "gcastle_sem": [
+                {
+                    "id": "G_SEM",
+                    "min": 0.5,
+                    "max": 2.0
+                }
+            ],
             "sem_params": [
                 {
                     "id": "SEM",
@@ -126,10 +139,18 @@
         "structure_learning_algorithms": {
             "pcalg_pc": [
                 {
-                    "id": "pc-gaussCItest",
+                    "id": "pc",
                     "alpha": [
                         0.001,
-                        0.1
+                        0.002,
+                        0.005,
+                        0.01,
+                        0.02,
+                        0.05,
+                        0.1,
+                        0.2,
+                        0.3,
+                        0.5
                     ],
                     "NAdelete": true,
                     "mmax": "Inf",
@@ -146,16 +167,162 @@
             ],
             "tetrad_fges": [
                 {
-                    "id": "fges-sem-bic",
+                    "id": "fges",
                     "faithfulnessAssumed": true,
                     "score": "sem-bic",
                     "datatype": "continuous",
                     "samplePrior": 1,
                     "structurePrior": 1,
                     "penaltyDiscount": [
+                        0.001,
+                        0.01,
+                        0.1,
+                        0.25,
+                        0.5,
                         0.75,
+                        1,
                         1.5
                     ],
+                    "timeout": null
+                }
+            ],
+            "tetrad_fci": [
+                {
+                    "id": "fci",
+                    "alpha": [
+                        0.001,
+                        0.002,
+                        0.005,
+                        0.01,
+                        0.02,
+                        0.05,
+                        0.1,
+                        0.2,
+                        0.3,
+                        0.5
+                    ],
+                    "test": "fisher-z-test",
+                    "datatype": "continuous",
+                    "timeout": null
+                }
+            ],
+            "gcastle_ica_lingam": [
+                {
+                    "id": "lingam",
+                    "thresh": [
+                        0.001,
+                        0.002,
+                        0.005,
+                        0.01,
+                        0.02,
+                        0.05,
+                        0.1,
+                        0.2,
+                        0.3,
+                        0.5
+                    ],
+                    "random_state": null,
+                    "max_iter": [
+                        100,
+                        1000
+                    ],
+                    "timeout": null
+                }
+            ],
+            "gcastle_anm": [
+                {
+                    "id": "anm",
+                    "alpha": [
+                        0.001,
+                        0.002,
+                        0.005,
+                        0.01,
+                        0.02,
+                        0.05,
+                        0.1,
+                        0.2,
+                        0.3,
+                        0.5
+                    ],
+                    "timeout": null
+                }
+            ],
+            "cdt_cam": [
+                {
+                    "id": "cam",
+                    "score": "nonlinear",
+                    "cutoff": 
+                    [
+                        0.001,
+                        0.002,
+                        0.005,
+                        0.01,
+                        0.02,
+                        0.05,
+                        0.1,
+                        0.2,
+                        0.3,
+                        0.5
+                    ],
+                    "variablesel": true,
+                    "selmethod": "gamboost",
+                    "pruning": true,
+                    "prunmethod": "gam",
+                    "timeout": null
+                }
+            ],
+            "gcastle_notears": [
+                {
+                    "id": "notears",
+                    "lambda1": [
+                        0.001,
+                        0.002,
+                        0.005,
+                        0.01,
+                        0.02,
+                        0.05,
+                        0.1,
+                        0.2,
+                        0.3,
+                        0.5
+                    ],
+                    "loss_type": "l2",
+                    "max_iter": [
+                        100,
+                        1000
+                    ],
+                    "h_tol": "1e-8",
+                    "rho_max": "1e+16",
+                    "w_threshold": [
+                        0.001,
+                        0.002,
+                        0.005,
+                        0.01,
+                        0.02,
+                        0.05,
+                        0.1,
+                        0.2,
+                        0.3,
+                        0.5
+                    ],
+                    "timeout": null
+                }
+            ],
+            "gcastle_notears_nonlinear": [
+                {
+                    "id": "notears_mlp",
+                    "lambda1": [0.001, 0.01, 0.1],
+                    "lambda2": [0.001, 0.01, 0.1],
+                    "max_iter": [100],
+                    "h_tol": "1e-8",
+                    "rho_max": "1e+16",
+                    "w_threshold": [0.1, 0.3, 0.5],
+                    "hidden_layers": [1],
+                    "hidden_units": [8, 16, 32],
+                    "bias": true,
+                    "model_type": "mlp",
+                    "device_type": "cpu",
+                    "device_ids": null,
                     "timeout": null
                 }
             ]

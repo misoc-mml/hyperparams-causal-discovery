@@ -100,8 +100,11 @@
                     "cutoff": 
                     [
                         0.001,
+                        0.005,
                         0.01,
-                        0.1
+                        0.05,
+                        0.1,
+                        0.5
                     ],
                     "variablesel": true,
                     "selmethod": "gamboost",
@@ -112,23 +115,42 @@
             ],
             "gcastle_notears": [
                 {
-                    "id": "gcastle_notears",
-                    "lambda1": 0.1,
+                    "id": "notears",
+                    "lambda1": [
+                        0.001,
+                        0.002,
+                        0.005,
+                        0.01,
+                        0.02,
+                        0.05,
+                        0.1,
+                        0.2,
+                        0.3
+                    ],
                     "loss_type": "l2",
-                    "max_iter": 100,
+                    "max_iter": [
+                        100,
+                        1000
+                    ],
                     "h_tol": "1e-8",
                     "rho_max": "1e+16",
                     "w_threshold": [
+                        0.001,
+                        0.002,
+                        0.005,
+                        0.01,
+                        0.02,
                         0.05,
                         0.1,
-                        0.25
+                        0.2,
+                        0.3
                     ],
                     "timeout": null
                 }
             ],
             "gcastle_notears_nonlinear": [
                 {
-                    "id": "gcastle_notears_mlp",
+                    "id": "notears_mlp",
                     "lambda1": 0.01,
                     "lambda2": 0.01,
                     "max_iter": 100,
