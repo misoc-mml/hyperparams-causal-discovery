@@ -1,0 +1,2 @@
+id,alpha,NAdelete,mmax,u2pd,skelmethod,conservative,majrule,solveconfl,numCores,verbose,indepTest,timeout
+PC,0.002,True,inf,relaxed,stable,False,False,False,1.0,False,gaussCItest,
