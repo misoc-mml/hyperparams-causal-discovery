@@ -1,0 +1,2 @@
+id,score,cutoff,variablesel,selmethod,pruning,prunmethod,timeout
+CAM,nonlinear,0.001,True,gamboost,True,gam,

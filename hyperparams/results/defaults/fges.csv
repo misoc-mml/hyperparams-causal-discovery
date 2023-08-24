@@ -1,0 +1,2 @@
+id,faithfulnessAssumed,score,datatype,samplePrior,structurePrior,penaltyDiscount,timeout
+FGES,True,sem-bic,continuous,1.0,1.0,1.5,

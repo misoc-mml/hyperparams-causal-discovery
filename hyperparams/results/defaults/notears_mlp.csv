@@ -1,0 +1,2 @@
+id,lambda1,lambda2,max_iter,h_tol,rho_max,w_threshold,hidden_layers,hidden_units,bias,model_type,device_type,device_ids,timeout
+NOTEARS_MLP,0.01,0.1,100.0,1e-08,1e+16,0.5,1.0,16.0,True,mlp,cpu,,

@@ -1,0 +1,2 @@
+id,lambda1,loss_type,max_iter,h_tol,rho_max,w_threshold,timeout
+NOTEARS,0.2,l2,100.0,1e-08,1e+16,0.2,

@@ -12,3 +12,10 @@ causal-cmd.log
 .java/
 .cache/
 __pycache__
+
+
+hyperparams/plots/dist/change/
+hyperparams/plots/dist/general/
+backups/
+
+!hyperparams/*
