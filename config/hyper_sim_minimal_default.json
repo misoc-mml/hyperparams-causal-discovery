@@ -28,7 +28,7 @@
         ],
         "evaluation": {
             "benchmarks": {
-                "filename_prefix": "hyper_sim/",
+                "filename_prefix": "hyper_sim_default/",
                 "show_seed": false,
                 "errorbar": false,
                 "errorbarh": false,
@@ -140,9 +140,7 @@
             "pcalg_pc": [
                 {
                     "id": "pc",
-                    "alpha": [
-                        0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5
-                    ],
+                    "alpha": [0.01],
                     "NAdelete": true,
                     "mmax": "Inf",
                     "u2pd": "relaxed",
@@ -164,18 +162,14 @@
                     "datatype": "continuous",
                     "samplePrior": 1,
                     "structurePrior": 1,
-                    "penaltyDiscount": [
-                        0.001, 0.01, 0.1, 0.25, 0.5, 0.75, 1, 1.5
-                    ],
+                    "penaltyDiscount": [2.0],
                     "timeout": null
                 }
             ],
             "tetrad_fci": [
                 {
                     "id": "fci",
-                    "alpha": [
-                        0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5
-                    ],
+                    "alpha": [0.01],
                     "test": "fisher-z-test",
                     "datatype": "continuous",
                     "timeout": null
@@ -184,22 +178,16 @@
             "gcastle_ica_lingam": [
                 {
                     "id": "lingam",
-                    "thresh": [
-                        0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5
-                    ],
+                    "thresh": [0.3],
                     "random_state": null,
-                    "max_iter": [
-                        100, 1000
-                    ],
+                    "max_iter": [1000],
                     "timeout": null
                 }
             ],
             "gcastle_anm": [
                 {
                     "id": "anm",
-                    "alpha": [
-                        0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5
-                    ],
+                    "alpha": [0.05],
                     "timeout": null
                 }
             ],
@@ -207,10 +195,7 @@
                 {
                     "id": "cam",
                     "score": "nonlinear",
-                    "cutoff": 
-                    [
-                        0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5
-                    ],
+                    "cutoff": [0.001],
                     "variablesel": true,
                     "selmethod": "gamboost",
                     "pruning": true,
@@ -221,32 +206,26 @@
             "gcastle_notears": [
                 {
                     "id": "notears",
-                    "lambda1": [
-                        0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5
-                    ],
+                    "lambda1": [0.1],
                     "loss_type": "l2",
-                    "max_iter": [
-                        100, 1000
-                    ],
+                    "max_iter": [100],
                     "h_tol": "1e-8",
                     "rho_max": "1e+16",
-                    "w_threshold": [
-                        0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5
-                    ],
+                    "w_threshold": [0.3],
                     "timeout": null
                 }
             ],
             "gcastle_notears_nonlinear": [
                 {
                     "id": "notears_mlp",
-                    "lambda1": [0.001, 0.01, 0.1],
-                    "lambda2": [0.001, 0.01, 0.1],
+                    "lambda1": [0.01],
+                    "lambda2": [0.01],
                     "max_iter": [100],
                     "h_tol": "1e-8",
                     "rho_max": "1e+16",
-                    "w_threshold": [0.1, 0.3, 0.5],
+                    "w_threshold": [0.3],
                     "hidden_layers": [1],
-                    "hidden_units": [8, 16, 32],
+                    "hidden_units": [10],
                     "bias": true,
                     "model_type": "mlp",
                     "device_type": "cpu",

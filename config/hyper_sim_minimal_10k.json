@@ -12,23 +12,11 @@
                 "parameters_id": "SEM",
                 "data_id": "gcastle_sem_gp",
                 "seed_range": [1, 10]
-            },
-            {
-                "graph_id": "sf_full",
-                "parameters_id": "G_SEM",
-                "data_id": "gcastle_sem_gumbel",
-                "seed_range": [1, 10]
-            },
-            {
-                "graph_id": "sf_full",
-                "parameters_id": "SEM",
-                "data_id": "gcastle_sem_gp",
-                "seed_range": [1, 10]
             }
         ],
         "evaluation": {
             "benchmarks": {
-                "filename_prefix": "hyper_sim/",
+                "filename_prefix": "hyper_sim_10k/",
                 "show_seed": false,
                 "errorbar": false,
                 "errorbarh": false,
@@ -39,9 +27,8 @@
                     "pc",
                     "fges",
                     "fci",
-                    "lingam",
-                    "anm",
                     "cam",
+                    "lingam",
                     "notears",
                     "notears_mlp"
                 ]
@@ -64,7 +51,7 @@
                     "method": "linear",
                     "sem_type": "gumbel",
                     "noise_scale": 1.0,
-                    "n": [200, 1000]
+                    "n": [10000]
                 },
                 {
                     "id": "gcastle_sem_gp",
@@ -72,7 +59,7 @@
                     "method": "nonlinear",
                     "sem_type": "gp",
                     "noise_scale": 1.0,
-                    "n": [200, 1000]
+                    "n": [10000]
                 }
             ],
             "iid": [
@@ -108,15 +95,9 @@
             "gcastle_dag": [
                 {
                     "id": "er_full",
-                    "p": [10, 20, 50],
-                    "d": [1, 4],
+                    "p": [50],
+                    "d": [1],
                     "method": "er"
-                },
-                {
-                    "id": "sf_full",
-                    "p": [10, 20, 50],
-                    "d": [1, 4],
-                    "method": "sf"
                 }
             ]
         },
@@ -141,7 +122,16 @@
                 {
                     "id": "pc",
                     "alpha": [
-                        0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5
+                        0.001,
+                        0.002,
+                        0.005,
+                        0.01,
+                        0.02,
+                        0.05,
+                        0.1,
+                        0.2,
+                        0.3,
+                        0.5
                     ],
                     "NAdelete": true,
                     "mmax": "Inf",
@@ -165,7 +155,14 @@
                     "samplePrior": 1,
                     "structurePrior": 1,
                     "penaltyDiscount": [
-                        0.001, 0.01, 0.1, 0.25, 0.5, 0.75, 1, 1.5
+                        0.001,
+                        0.01,
+                        0.1,
+                        0.25,
+                        0.5,
+                        0.75,
+                        1,
+                        1.5
                     ],
                     "timeout": null
                 }
@@ -174,7 +171,16 @@
                 {
                     "id": "fci",
                     "alpha": [
-                        0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5
+                        0.001,
+                        0.002,
+                        0.005,
+                        0.01,
+                        0.02,
+                        0.05,
+                        0.1,
+                        0.2,
+                        0.3,
+                        0.5
                     ],
                     "test": "fisher-z-test",
                     "datatype": "continuous",
@@ -185,11 +191,21 @@
                 {
                     "id": "lingam",
                     "thresh": [
-                        0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5
+                        0.001,
+                        0.002,
+                        0.005,
+                        0.01,
+                        0.02,
+                        0.05,
+                        0.1,
+                        0.2,
+                        0.3,
+                        0.5
                     ],
                     "random_state": null,
                     "max_iter": [
-                        100, 1000
+                        100,
+                        1000
                     ],
                     "timeout": null
                 }
@@ -198,7 +214,16 @@
                 {
                     "id": "anm",
                     "alpha": [
-                        0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5
+                        0.001,
+                        0.002,
+                        0.005,
+                        0.01,
+                        0.02,
+                        0.05,
+                        0.1,
+                        0.2,
+                        0.3,
+                        0.5
                     ],
                     "timeout": null
                 }
@@ -209,7 +234,16 @@
                     "score": "nonlinear",
                     "cutoff": 
                     [
-                        0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5
+                        0.001,
+                        0.002,
+                        0.005,
+                        0.01,
+                        0.02,
+                        0.05,
+                        0.1,
+                        0.2,
+                        0.3,
+                        0.5
                     ],
                     "variablesel": true,
                     "selmethod": "gamboost",
@@ -222,16 +256,35 @@
                 {
                     "id": "notears",
                     "lambda1": [
-                        0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5
+                        0.001,
+                        0.002,
+                        0.005,
+                        0.01,
+                        0.02,
+                        0.05,
+                        0.1,
+                        0.2,
+                        0.3,
+                        0.5
                     ],
                     "loss_type": "l2",
                     "max_iter": [
-                        100, 1000
+                        100,
+                        1000
                     ],
                     "h_tol": "1e-8",
                     "rho_max": "1e+16",
                     "w_threshold": [
-                        0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5
+                        0.001,
+                        0.002,
+                        0.005,
+                        0.01,
+                        0.02,
+                        0.05,
+                        0.1,
+                        0.2,
+                        0.3,
+                        0.5
                     ],
                     "timeout": null
                 }
