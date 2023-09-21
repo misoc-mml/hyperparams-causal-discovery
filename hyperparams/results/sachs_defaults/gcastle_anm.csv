@@ -1,0 +1,2 @@
+TPR_pattern,FPR_pattern,FPRn_pattern,SHD_pattern,SHD_cpdag,FPR_skel,FNR_skel,TP_skel,FN_skel,FP_skel,TN_skel,n_nodes,true_n_edges_skel,true_n_non_edges_skel,graph_type,replicate,algorithm,adjmat,parameters,data,time,ntests,id,alpha,timeout
+0,0.0689655172413793,0.176470588235294,20,NA,0.176470588235294,1,0,17,3,35,11,17,38,unknown,1,gcastle_anm,myadjmats/sachs,NA,fixed/filename=2005_sachs_2_cd3cd28icam2_log_std.csv/n=902,30.9180756807327,NA,anm,0.05,NA

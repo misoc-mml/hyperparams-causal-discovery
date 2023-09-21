@@ -1,0 +1,2 @@
+TPR_pattern,FPR_pattern,FPRn_pattern,SHD_pattern,SHD_cpdag,FPR_skel,FNR_skel,TP_skel,FN_skel,FP_skel,TN_skel,n_nodes,true_n_edges_skel,true_n_non_edges_skel,graph_type,replicate,algorithm,adjmat,parameters,data,time,ntests,id,alpha,test,datatype,timeout
+0.529411764705882,0.0229885057471264,0.0588235294117647,9,9,0.0588235294117647,0.470588235294118,9,8,1,37,11,17,38,dag,1,tetrad_fci,myadjmats/sachs,NA,fixed/filename=2005_sachs_2_cd3cd28icam2_log_std.csv/n=902,1.84,NA,fci,0.01,fisher-z-test,continuous,NA

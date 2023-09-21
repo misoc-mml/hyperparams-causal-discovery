@@ -1,0 +1,197 @@
+{
+    "benchmark_setup": {
+        "data": [
+            {
+                "graph_id": "syntren_dag_1.csv",
+                "parameters_id": null,
+                "data_id": "syntren_data_std_1.csv",
+                "seed_range": null
+            },
+            {
+                "graph_id": "syntren_dag_2.csv",
+                "parameters_id": null,
+                "data_id": "syntren_data_std_2.csv",
+                "seed_range": null
+            },
+            {
+                "graph_id": "syntren_dag_3.csv",
+                "parameters_id": null,
+                "data_id": "syntren_data_std_3.csv",
+                "seed_range": null
+            },
+            {
+                "graph_id": "syntren_dag_4.csv",
+                "parameters_id": null,
+                "data_id": "syntren_data_std_4.csv",
+                "seed_range": null
+            },
+            {
+                "graph_id": "syntren_dag_5.csv",
+                "parameters_id": null,
+                "data_id": "syntren_data_std_5.csv",
+                "seed_range": null
+            },
+            {
+                "graph_id": "syntren_dag_6.csv",
+                "parameters_id": null,
+                "data_id": "syntren_data_std_6.csv",
+                "seed_range": null
+            },
+            {
+                "graph_id": "syntren_dag_7.csv",
+                "parameters_id": null,
+                "data_id": "syntren_data_std_7.csv",
+                "seed_range": null
+            },
+            {
+                "graph_id": "syntren_dag_8.csv",
+                "parameters_id": null,
+                "data_id": "syntren_data_std_8.csv",
+                "seed_range": null
+            },
+            {
+                "graph_id": "syntren_dag_9.csv",
+                "parameters_id": null,
+                "data_id": "syntren_data_std_9.csv",
+                "seed_range": null
+            },
+            {
+                "graph_id": "syntren_dag_10.csv",
+                "parameters_id": null,
+                "data_id": "syntren_data_std_10.csv",
+                "seed_range": null
+            }
+        ],
+        "evaluation": {
+            "benchmarks": {
+                "filename_prefix": "hyper_syntren_default/",
+                "show_seed": false,
+                "errorbar": false,
+                "errorbarh": false,
+                "scatter": false,
+                "path": true,
+                "text": false,
+                "ids": [
+                    "pc",
+                    "fges",
+                    "fci",
+                    "lingam",
+                    "anm",
+                    "cam",
+                    "notears",
+                    "notears_mlp"
+                ]
+            },
+            "graph_true_stats": false,
+            "graph_true_plots": false,
+            "ggally_ggpairs": false,
+            "graph_plots": [],
+            "mcmc_traj_plots": [],
+            "mcmc_heatmaps": [],
+            "mcmc_autocorr_plots": []
+        }
+    },
+    "resources": {
+        "data": {},
+        "graph": {},
+        "parameters": {},
+        "structure_learning_algorithms": {
+            "pcalg_pc": [
+                {
+                    "id": "pc",
+                    "alpha": [0.01],
+                    "NAdelete": true,
+                    "mmax": "Inf",
+                    "u2pd": "relaxed",
+                    "skelmethod": "stable",
+                    "conservative": false,
+                    "majrule": false,
+                    "solveconfl": false,
+                    "numCores": 1,
+                    "verbose": false,
+                    "indepTest": "gaussCItest",
+                    "timeout": null
+                }
+            ],
+            "tetrad_fges": [
+                {
+                    "id": "fges",
+                    "faithfulnessAssumed": true,
+                    "score": "sem-bic",
+                    "datatype": "continuous",
+                    "samplePrior": 1,
+                    "structurePrior": 1,
+                    "penaltyDiscount": [2.0],
+                    "timeout": null
+                }
+            ],
+            "tetrad_fci": [
+                {
+                    "id": "fci",
+                    "alpha": [0.01],
+                    "test": "fisher-z-test",
+                    "datatype": "continuous",
+                    "timeout": null
+                }
+            ],
+            "gcastle_ica_lingam": [
+                {
+                    "id": "lingam",
+                    "thresh": [0.3],
+                    "random_state": null,
+                    "max_iter": [1000],
+                    "timeout": null
+                }
+            ],
+            "gcastle_anm": [
+                {
+                    "id": "anm",
+                    "alpha": [0.05],
+                    "timeout": null
+                }
+            ],
+            "cdt_cam": [
+                {
+                    "id": "cam",
+                    "score": "nonlinear",
+                    "cutoff": [0.001],
+                    "variablesel": true,
+                    "selmethod": "gamboost",
+                    "pruning": true,
+                    "prunmethod": "gam",
+                    "timeout": null
+                }
+            ],
+            "gcastle_notears": [
+                {
+                    "id": "notears",
+                    "lambda1": [0.1],
+                    "loss_type": "l2",
+                    "max_iter": [100],
+                    "h_tol": "1e-8",
+                    "rho_max": "1e+16",
+                    "w_threshold": [0.3],
+                    "timeout": null
+                }
+            ],
+            "gcastle_notears_nonlinear": [
+                {
+                    "id": "notears_mlp",
+                    "lambda1": [0.01],
+                    "lambda2": [0.01],
+                    "max_iter": [100],
+                    "h_tol": "1e-8",
+                    "rho_max": "1e+16",
+                    "w_threshold": [0.3],
+                    "hidden_layers": [1],
+                    "hidden_units": [10],
+                    "bias": true,
+                    "model_type": "mlp",
+                    "device_type": "cpu",
+                    "device_ids": null,
+                    "timeout": null
+                }
+            ]
+        }
+    }
+}
