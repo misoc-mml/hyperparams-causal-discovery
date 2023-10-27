@@ -1,70 +1,22 @@
-<snippet>
-  <content>
+# Robustness of Algorithms for Causal Structure Learning to Hyperparameter Choice
+This code supplements the paper and can be used to replicate the numerical experiments.
 
+## Benchpress
+This code is a fork of [Benchpress](https://github.com/felixleopoldo/benchpress) that allows us to evaluate a variety of structure learning algorithms.
 
-<p align="left">
-<a href="https://benchpressdocs.readthedocs.io/" target="_blank" rel="noopener noreferrer">
-<img width="248"  src="docs/source/_static/benchpress-logo-white-bg.png" alt="Benchpress logo">
-</a>
-</p>
+## The Analysis of Hyperparameters
+Our analysis of the influence of hyperparameter selection on the performance of the algorithms is the extra code added on top of Benchpress, and which can be found under the [hyperparams](hyperparams/) folder.
 
+## How to Replicate the Paper
+0. Download this code.
+1. Go to the official documentation of Benchpress and perform the [installation steps](https://benchpressdocs.readthedocs.io/en/latest/installation.html#installation).
+2. Open a bash command and enter this repository: `cd hyperparams-causal-discovery`.
+3. To run all the experiments, execute: `bash run.sh`.
+4. (warning: the above step may take weeks to complete)
 
-[![Snakemake](https://img.shields.io/badge/snakemake-≥7.14-brightgreen.svg)](https://snakemake.bitbucket.io)
-[![Documentation Status](https://readthedocs.org/projects/benchpressdocs/badge/?version=latest)](https://benchpressdocs.readthedocs.io/en/latest/?badge=latest)
-[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+The results are also available in this repository, [here](hyperparams/results/).
 
----
+## Further Analysis
+All the post-processing code of the results can be found in the Python Notebooks (.ipynb files) [here](hyperparams/). Note running these may require some additional Python packages to be installed.
 
-Benchpress [[1]](#1) is a [Snakemake](https://snakemake.readthedocs.io/en/stable/) workflow where structure learning algorithms, implemented in possibly different languages, can be executed and compared.
-The computations scale seamlessly on multiple cores or *"... to server, cluster, grid and cloud environments, without the need to modify the workflow definition" - Snakemake*.
-The documentation is found at https://benchpressdocs.readthedocs.io. 
-<!-- [This](https://benchpressdocs.readthedocs.io/en/latest/json_overview.html#evaluation) section shows an overview of the supported evaluation methods. -->
-
-The following main functionalities are provided by Benchpress 
-
-* Benchmarks - Benchmark publically available structure learning algorithms.
-* Algorithm development - Benchmark your own algorithm along with the existing ones while developing.
-* Data analysis - Estimate the underlying graph structure for your own dataset(s).
-
-You may also have a look at [this Medium story](https://medium.com/@felixleopoldorios/structure-learning-using-benchpress-826847db0aa8) for an introduction.
-
-
-## Citing
-
-```
-@misc{rios2021benchpress,
-      title={Benchpress: a scalable and versatile workflow for benchmarking structure learning algorithms for graphical models}, 
-      author={Felix L. Rios and Giusi Moffa and Jack Kuipers},
-      year={2021},
-      eprint={2107.03863},
-      archivePrefix={arXiv},
-      primaryClass={stat.ML}
-}
-```
-
-## Contact
-
-For problems, bug reporting, or questions please raise an issue or open a discussion thread.
-
-## Contributing
-Contrubutions are very welcomed. See [CONTRIBUTING.md](CONTRIBUTING.md) for instructions. 
-
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Open a pull request
-
-## License
-
-This project is licensed under the GPL-2.0 License - see the [LICENSE](LICENSE) file for details
-
-</content>
-  <tabTrigger></tabTrigger>
-</snippet>
-
-
-## References
-* <a id="1">[1]</a> [Felix L. Rios and Giusi Moffa and Jack Kuipers Benchpress: a scalable and versatile workflow for benchmarking structure learning algorithms for graphical models. *ArXiv eprints.*, 2107.03863, 2021.](https://arxiv.org/abs/2107.03863)
-
-
+Executing the above files produces all kinds of figures that can be also found [here](hyperparams/plots/). Only selected figures are presented in the paper.
