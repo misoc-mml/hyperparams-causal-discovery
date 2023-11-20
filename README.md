@@ -1,5 +1,5 @@
 # Robustness of Algorithms for Causal Structure Learning to Hyperparameter Choice
-This code supplements the paper and can be used to replicate the numerical experiments.
+This code supplements the [paper](https://arxiv.org/abs/2310.18212) and can be used to replicate the numerical experiments.
 
 ## Benchpress
 This code is a fork of [Benchpress](https://github.com/felixleopoldo/benchpress) that allows us to evaluate a variety of structure learning algorithms.
@@ -20,3 +20,6 @@ The results are also available in this repository, [here](hyperparams/results/).
 All the post-processing code of the results can be found in the Python Notebooks (.ipynb files) [here](hyperparams/). Note running these may require some additional Python packages to be installed.
 
 Executing the above files produces all kinds of figures that can be also found [here](hyperparams/plots/). Only selected figures are presented in the paper.
+
+## References
+[1] D. Machlanski, S. Samothrakis, and P. Clarke, ‘Robustness of Algorithms for Causal Structure Learning to Hyperparameter Choice’. arXiv, Oct. 27, 2023. doi: 10.48550/arXiv.2310.18212.
