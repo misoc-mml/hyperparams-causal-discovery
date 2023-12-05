@@ -1,8 +1,8 @@
 # Robustness of Algorithms for Causal Structure Learning to Hyperparameter Choice
-This code supplements the [paper](https://arxiv.org/abs/2310.18212) and can be used to replicate the numerical experiments.
+This code supplements the [paper](https://arxiv.org/abs/2310.18212) [1] and can be used to replicate the numerical experiments.
 
 ## Benchpress
-This code is a fork of [Benchpress](https://github.com/felixleopoldo/benchpress) that allows us to evaluate a variety of structure learning algorithms.
+This code is a fork of [Benchpress](https://github.com/felixleopoldo/benchpress) [2] that allows us to evaluate a variety of structure learning algorithms.
 
 ## The Analysis of Hyperparameters
 Our analysis of the influence of hyperparameter selection on the performance of the algorithms is the extra code added on top of Benchpress, and which can be found under the [hyperparams](hyperparams/) folder.
@@ -23,3 +23,4 @@ Executing the above files produces all kinds of figures that can be also found [
 
 ## References
 [1] D. Machlanski, S. Samothrakis, and P. Clarke, ‘Robustness of Algorithms for Causal Structure Learning to Hyperparameter Choice’. arXiv, Oct. 27, 2023. doi: 10.48550/arXiv.2310.18212.
+[2] F. L. Rios, G. Moffa, and J. Kuipers, “Benchpress: A Scalable and Versatile Workflow for Benchmarking Structure Learning Algorithms.” arXiv, Jul 8, 2021. doi: 10.48550/arXiv.2107.03863.
