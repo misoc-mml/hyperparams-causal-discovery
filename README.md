@@ -22,6 +22,5 @@ All the post-processing code of the results can be found in the Python Notebooks
 Executing the above files produces all kinds of figures that can be also found [here](hyperparams/plots/). Only selected figures are presented in the paper.
 
 ## References
-[1] D. Machlanski, S. Samothrakis, and P. Clarke, ‘Robustness of Algorithms for Causal Structure Learning to Hyperparameter Choice’. arXiv, Oct. 27, 2023. doi: 10.48550/arXiv.2310.18212.
-
-[2] F. L. Rios, G. Moffa, and J. Kuipers, “Benchpress: A Scalable and Versatile Workflow for Benchmarking Structure Learning Algorithms.” arXiv, Jul 8, 2021. doi: 10.48550/arXiv.2107.03863.
+- [1] D. Machlanski, S. Samothrakis, and P. Clarke, ‘Robustness of Algorithms for Causal Structure Learning to Hyperparameter Choice’. arXiv, Oct. 27, 2023. doi: 10.48550/arXiv.2310.18212.
+- [2] F. L. Rios, G. Moffa, and J. Kuipers, “Benchpress: A Scalable and Versatile Workflow for Benchmarking Structure Learning Algorithms.” arXiv, Jul 8, 2021. doi: 10.48550/arXiv.2107.03863.
