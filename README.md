@@ -1,6 +1,8 @@
 # Robustness of Algorithms for Causal Structure Learning to Hyperparameter Choice
 This code supplements the [paper](https://arxiv.org/abs/2310.18212) [1] and can be used to replicate the numerical experiments.
 
+Now accepted for poster presentation at [CLeaR 2024](https://www.cclear.cc/2024) (to appear in PMLR).
+
 ## Benchpress
 This code is a fork of [Benchpress](https://github.com/felixleopoldo/benchpress) [2] that allows us to evaluate a variety of structure learning algorithms.
 
